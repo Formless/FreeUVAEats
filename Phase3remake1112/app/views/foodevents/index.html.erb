@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+<title>Free UVA Eats</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="styles/elegant-press.css" type="text/css" />
+<script src="scripts/elegant-press.js" type="text/javascript"></script>
+<!--[if IE]><style>#header h1 a:hover{font-size:75px;}</style><![endif]-->
+</head>
+<body>
+<div class="main-container">
+  <header>
+    <h1><a href="index.html">Free UVA Eats</a></h1>
+    <p id="tagline"><strong>Your guide to the best kind of food on grounds</strong></p>
+  </header>
+</div>
+<div class="main-container">
+
+    <br class="clear" />
+  </div>
+</div>
+
+
+<div class="main-container">
+
+  <div id="nav-container">
+   <nav> 
+    <ul class="nav">
+      <li><a href="index.php">Home</a></li>
+      <li><a href="http://phase3remake1112.heroku.com/foodevents">Event Index</a></li>
+      <li><a href="android.php">Android App</a></li>
+      <li><a href="about.php">About</a></li>
+      <li class="last"><a href="contact.php">Contact</a></li>
+    </ul>
+   </nav> 
+    <div class="clear"></div>
+  </div>
+
+</div>
+
+<div class="main-container">
+  <div class="container1">
+ 
+
+    <div class="box">
+           <div class="content">
+       		
+		<h1>Listing Food Events</h1>
+
+<%= form_tag foodevents_path, :method => 'get' do %>
+<p>      
+	  <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %> 
+</p>
+
+<% end %> 
+
+<%= link_to 'New Food Event', new_foodevent_path %>
+
+<table>
+  <tr>
+    <th>From</th>
+    <th>Subject</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Body</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @foodevents.each do |foodevent| %>
+  <tr>
+    <td><%= foodevent.from %></td>
+    <td><%= foodevent.subject %></td>
+    <td><%= foodevent.date %></td>
+    <td><%= foodevent.time %></td>
+    <td><%= foodevent.body %></td>
+    <td><%= link_to 'Show', foodevent %></td>
+    <td><%= link_to 'Edit', edit_foodevent_path(foodevent) %></td>
+    <td><%= link_to 'Destroy', foodevent, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+		
+		
+      </div>
+ 
+     <div class="sidebar">
+       <div class="subnav">
+          <h5>Mission Statement</h5>
+		  
+		  <p>As a broke college student, it's hard to turn down the prospects of a free meal. That's why we've created Free UVA Eats - to fill your belly while helping your wallet stay happy.</p>
+		  <br>
+		  <p>We're helping you keep track of all events on grounds where there's free grub to be had (and eaten).</p>
+		  <br>
+		  <br>
+		  <br>
+		  <h6>Contact Us</h6>
+		  <p>Did you notice any missing free food events in our database? OOPS! Please help us by adding it to the Food Event Board. </p>
+		  <br>
+		  <p>For further comments and suggestions, please contact us at pewpew4720@gmail.com</p>
+ 
+      </div>
+
+      
+      
+      <div class="clear"></div>
+    </div>
+    
+ 
+ </div>
+<div class="main-container">
+ </div>
+
+</div> </div> 
+ <footer>
+    <p class="tagline_left">Copyright &copy; 2011 - All Rights Reserved - <a href="mailto:pewpew4720@gmail.com">Free UVA Eats</a></p>
+    <p class="tagline_right">Design by <a href="http://www.priteshgupta.com/" title="Pritesh Gupta" target="_blank" >PriteshGupta.com</a></p>
+    <br class="clear" />
+  </footer>
+
+<br />
+<br />
+</div>
+    </body>
+</html>
+
+

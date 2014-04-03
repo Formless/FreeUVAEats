@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>From:</b>
+  <%= @foodevent.from %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @foodevent.subject %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @foodevent.date %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @foodevent.time %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @foodevent.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_foodevent_path(@foodevent) %> |
+<%= link_to 'Back', foodevents_path %>
