@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="footer">Use the text box to search for events! Click and hold on to one of the items below to share to Twitter!</string>
+    <string name="hello">Hello World, Phase4Activity!</string>
+    <string name="app_name">FreeUVAEats</string>
+    <string-array name="contextMenu">
+		<item>Share to Twitter</item>
+		<item>Back</item>
+	</string-array>
+</resources>
